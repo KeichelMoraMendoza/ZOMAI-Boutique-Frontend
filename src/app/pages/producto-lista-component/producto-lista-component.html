@@ -1,0 +1,86 @@
+<div class="container-fluid py-4">
+  <div class="card shadow-sm border-0 rounded-0"> <div class="card-header bg-white border-0 pt-4 pb-3 px-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div>
+          <h2 class="mb-1 fw-bold text-dark" style="font-family: 'Playfair Display', serif;">Gestión de Inventario - ZOMAI</h2>
+          <p class="text-muted mb-0">
+            Administre el catálogo de prendas y productos de la boutique.
+          </p>
+        </div>
+
+        <button (click)="nuevaProducto()" class="btn btn-primary px-4 py-2">
+          <i class="fas fa-plus me-2"></i>
+          Nuevo Producto
+        </button>
+      </div>
+    </div>
+
+    <div class="card-body px-4 pt-3 pb-2">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-10">
+          <label for="txtBuscar" class="form-label fw-semibold">Buscar en Catálogo</label>
+          <input
+            type="text"
+            id="txtBuscar"
+            class="form-control rounded-0"
+            placeholder="Buscar por nombre, descripción o talla..."
+          />
+        </div>
+
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-outline-dark rounded-0">
+            <i class="fas fa-search me-2"></i>
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body px-4 pb-4">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr style="text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px;">
+              <th>ID</th>
+              <th>Prenda</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Talla</th>
+              <th>Color</th>
+              <th>Stock Actual</th>
+              <th class="text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let producto of productos">
+                <td class="fw-bold">#{{ producto.ID_PRODUCTO }}</td>
+                <td>{{ producto.NOMBRE }}</td>
+                <td class="text-truncate" style="max-width: 200px;">{{ producto.DESCRIPCION }}</td>
+                <td>{{ producto.PRECIO | currency:'¢ ' }}</td>
+                <td><span class="badge bg-light text-dark border-0">{{ producto.TALLA }}</span></td>
+                <td>{{ producto.COLOR }}</td>
+                <td>
+                  <span [ngClass]="producto.STOCKACTUAL <= producto.STOCKMINIMO ? 'text-danger fw-bold' : ''">
+                    {{ producto.STOCKACTUAL }}
+                  </span>
+                </td>
+                <td class="text-center">
+                  <button (click)="editarProducto(producto.ID_PRODUCTO)" class="btn btn-sm btn-outline-warning me-2 border-0">
+                   <i class="fas fa-edit"></i>
+                  </button>
+                  <button (click)="eliminarProducto(producto.ID_PRODUCTO)" class="btn btn-sm btn-outline-danger border-0">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+
+            <tr *ngIf="productos?.length === 0">
+              <td colspan="8" class="text-center text-muted py-5">
+                No se encontraron productos en la base de datos de ZOMAI.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> </div>

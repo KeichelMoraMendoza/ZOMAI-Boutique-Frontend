@@ -1,0 +1,96 @@
+.social, #recoverform, .checkbox, #to-recover, .m-b-0, img {
+    display: none !important;
+}
+
+.login-box {
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.login-sidebar .login-box {
+    right: 0px;
+    position: absolute;
+    height: 100%;
+    width: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-zomai {
+    background-color: #1C1C1C !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+    padding: 15px !important;
+    border: none !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 2px !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-zomai:hover {
+    background-color: #9D844D !important; 
+}
+
+.form-control {
+    border: none !important;
+    border-bottom: 1px solid #e2e2e2 !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    padding: 10px 0 !important;
+    background: transparent !important;
+}
+
+.form-control:focus {
+    border-bottom: 1px solid #9D844D !important;
+}
+.login-register {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.login-sidebar .login-box {
+    right: 0px;
+    position: absolute;
+    height: 100%;
+    width: 450px;
+    background: #ffffff !important;
+    display: flex;
+    align-items: center;
+    border: none !important;
+}
+
+.btn-zomai-final {
+    background-color: #1C1C1C !important;
+    color: #ffffff !important;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-zomai-final:hover {
+    background-color: #9D844D !important;
+}
+
+.social, .checkbox, #to-recover, .m-b-0, .row.m-t-10 {
+    display: none !important;
+}
+
+.form-control {
+    border: none !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    border-radius: 0 !important;
+    padding: 12px 0 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px;
+}

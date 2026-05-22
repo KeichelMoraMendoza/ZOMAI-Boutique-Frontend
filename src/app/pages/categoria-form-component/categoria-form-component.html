@@ -1,0 +1,34 @@
+<div class="container py-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-header bg-white border-0 pt-4 px-4">
+      <h3 class="fw-bold">Nueva Categoría - ZOMAI Boutique</h3>
+      <p class="text-muted">Defina las secciones para organizar su catálogo de moda.</p>
+    </div>
+
+    <div class="card-body px-4">
+      <form [formGroup]="categoriaForm" (ngSubmit)="guardarCategoria()">
+        <div class="row g-3">
+          
+          <div class="col-12">
+            <label class="form-label fw-bold">Nombre de la Categoría</label>
+            <input type="text" formControlName="NOMBRECATEGORIA" class="form-control" placeholder="Ej: Tops y Blusas">
+          </div>
+
+          <div class="col-12">
+            <label class="form-label fw-bold">Descripción / Notas de Estilo</label>
+            <textarea formControlName="DESCRIPCION" class="form-control" rows="4" 
+              placeholder="Ej: Prendas superiores de corte clásico y telas naturales..."></textarea>
+          </div>
+
+        </div>
+
+        <div class="d-flex justify-content-end gap-2 mt-5 mb-3">
+          <button type="button" (click)="cancelar()" class="btn btn-light px-4">Cancelar</button>
+          <button type="submit" [disabled]="categoriaForm.invalid" class="btn btn-primary px-5">
+            Guardar Categoría
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

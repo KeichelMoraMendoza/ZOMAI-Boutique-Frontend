@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --zomai-white: #FFFFFF;
+  --zomai-ivory: #F9F8F6;    
+  --zomai-charcoal: #1C1C1C; 
+  --zomai-gold-muted: #9D844D; 
+  --zomai-border: #E2E2E2;   
+}
+
+body {
+  background-color: var(--zomai-ivory);
+  color: var(--zomai-charcoal);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, .brand-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: var(--zomai-charcoal);
+}
+
+
+.left-sidebar, 
+.scroll-sidebar, 
+#sidebarnav {
+    background: var(--zomai-white) !important;
+    box-shadow: none !important;
+    border-right: 1px solid var(--zomai-border) !important;
+}
+
+.fix-sidebar .left-sidebar {
+    background: var(--zomai-white) !important;
+}
+
+
+.sidebar-nav ul li a {
+    color: #444444 !important;
+    font-weight: 400 !important;
+    background: transparent !important;
+    padding: 12px 25px !important;
+    border-left: 4px solid transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.sidebar-nav ul li a i {
+    color: var(--zomai-charcoal) !important;
+    font-size: 1.2rem !important;
+    margin-right: 15px !important;
+}
+
+.sidebar-nav ul li a:hover, 
+.sidebar-nav ul li.active > a {
+    background: var(--zomai-ivory) !important;
+    color: var(--zomai-gold-muted) !important;
+    border-left: 4px solid var(--zomai-gold-muted) !important;
+}
+
+.sidebar-nav ul li a:hover i,
+.sidebar-nav ul li.active > a i {
+    color: var(--zomai-gold-muted) !important;
+}
+
+
+.nav-small-cap,   
+.user-profile,      
+.has-arrow:after,  
+.nav-devider        
+{
+    display: none !important;
+}
+
+.btn-primary {
+  background-color: var(--zomai-charcoal) !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding: 12px 30px !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--zomai-gold-muted) !important;
+  letter-spacing: 3px;
+}

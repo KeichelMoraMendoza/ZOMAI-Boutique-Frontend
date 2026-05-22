@@ -1,0 +1,25 @@
+.card {
+  border: 1px solid var(--zomai-border) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important; 
+}
+
+.table thead th {
+  background-color: transparent;
+  border-bottom: 2px solid var(--zomai-charcoal);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  color: #666;
+}
+
+.table tbody td {
+  padding: 1.5rem 0.75rem;
+  border-bottom: 1px solid var(--zomai-border);
+  font-weight: 300;
+}
+
+.categoria-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+}

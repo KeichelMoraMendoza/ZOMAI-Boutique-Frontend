@@ -1,0 +1,55 @@
+<div class="container-fluid py-4">
+  <div class="card shadow-sm border-0 rounded-4">
+    <div class="card-header bg-white border-0 pt-4 pb-3 px-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div>
+          <h2 class="mb-1 fw-bold text-dark">Socios Comerciales - ZOMAI</h2>
+          <p class="text-muted mb-0">Gestión de proveedores y contactos de suministro.</p>
+        </div>
+        <button (click)="nuevoProveedor()" class="btn btn-primary px-4 py-2 rounded-3">
+          <i class="fas fa-plus me-2"></i> Nuevo Proveedor
+        </button>
+      </div>
+    </div>
+
+    <div class="card-body px-4 pb-4">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>ID</th>
+              <th>Nombre Empresa</th>
+              <th>Teléfono</th>
+              <th>Correo Electrónico</th>
+              <th class="text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="proveedores.length > 0">
+            <tr *ngFor="let p of proveedores">
+              <td>{{ p.ID_PROVEEDOR }}</td>
+              <td>{{ p.NOMBREPROVEEDOR }}</td>
+              <td>{{ p.TELEFONO }}</td>
+              <td>{{ p.EMAIL }}</td>
+              <td class="text-center">
+                <button (click)="editarProveedor(p.ID_PROVEEDOR)" class="btn btn-sm btn-outline-warning me-2">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button (click)="eliminarProveedor(p.ID_PROVEEDOR)" class="btn btn-sm btn-outline-danger">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+
+<tbody *ngIf="proveedores.length === 0">
+  <tr>
+    <td colspan="6" class="text-center py-4 text-muted">
+      No se encontraron socios comerciales en la base de datos de ZOMAI.
+    </td>
+  </tr>
+</tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

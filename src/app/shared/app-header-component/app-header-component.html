@@ -1,0 +1,84 @@
+<header class="topbar" style="background: #ffffff; border-bottom: 1px solid #E2E2E2;">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <div class="navbar-header" style="background: transparent; border-right: 1px solid #f0f0f0;">
+            <a class="navbar-brand" href="index.html" style="padding-left: 20px;">
+                <b style="font-family: 'Playfair Display', serif; letter-spacing: 2px; color: #1C1C1C; font-size: 1.4rem;">
+                    ZOMAI
+                </b>
+            </a>
+        </div>
+        
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"> 
+                    <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark text-muted" href="javascript:void(0)"><i class="ti-menu"></i></a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark text-muted" href="javascript:void(0)"><i class="ti-menu"></i></a> 
+                </li>
+            </ul>
+
+            <ul class="navbar-nav my-lg-0">
+                <li class="nav-item hidden-xs-down search-box"> 
+                    <a class="nav-link hidden-sm-down waves-effect waves-dark text-muted" href="javascript:void(0)"><i class="ti-search"></i></a>
+                    <form class="app-search">
+                        <input type="text" class="form-control" placeholder="Buscar..." style="border-radius: 0px;"> 
+                        <a class="srh-btn"><i class="ti-close"></i></a> 
+                    </form>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark text-muted" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                        <i class="mdi mdi-message-outline"></i>
+                        <div class="notify"> <span class="heartbit" style="border-color: #9D844D;"></span> <span class="point" style="background-color: #9D844D;"></span> </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right mailbox animated fadeIn" style="border-radius: 0px; border: 1px solid #E2E2E2;">
+                        <ul>
+                            <li><div class="drop-title">Notificaciones</div></li>
+                            <li>
+                                <div class="message-center">
+                                    <a href="#" style="border-bottom: 1px solid #f9f9f9;">
+                                        <div class="btn btn-danger btn-circle" style="background-color: #1C1C1C; border: none;"><i class="fa fa-link"></i></div>
+                                        <div class="mail-contnet">
+                                            <h5 style="color: #1C1C1C;">Sistema</h5> <span class="mail-desc">Bienvenido a ZOMAI</span> <span class="time">9:30 AM</span> 
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="nav-link text-center text-dark" href="javascript:void(0);"> <strong>Ver todas</strong> <i class="fa fa-angle-right"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="../../images/users/1.jpg" alt="user" class="profile-pic" style="width: 30px; height: 30px; filter: grayscale(100%);" />
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right animated fadeIn" style="border-radius: 0px; border: 1px solid #E2E2E2; width: 220px;">
+                        <ul class="dropdown-user">
+                            <li>
+                                <div class="dw-user-box" style="padding: 15px;">
+                                    <div class="u-text">
+                                        <h4 style="font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;">Administrador</h4>
+                                        <p class="text-muted small">admin@zomai.com</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li role="separator" class="divider" style="margin: 0;"></li>
+                            <li><a href="#" class="p-10 d-block text-dark small"><i class="ti-user mr-2"></i> Mi Perfil</a></li>
+                            <li><a href="#" class="p-10 d-block text-dark small"><i class="ti-settings mr-2"></i> Ajustes</a></li>
+                            <li role="separator" class="divider" style="margin: 0;"></li>
+                            <li>
+                                <a href="#" (click)="logout()" class="p-10 d-block text-danger small font-weight-bold">
+                                    <i class="fa fa-power-off mr-2"></i> Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

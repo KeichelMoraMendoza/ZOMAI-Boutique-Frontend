@@ -1,0 +1,91 @@
+<div class="container-fluid py-4">
+  <div class="card shadow-sm border-0 rounded-4">
+    
+    <div class="card-header bg-white border-0 pt-4 pb-3 px-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div>
+          <h2 class="mb-1 fw-bold text-dark">Control de Usuarios - ZOMAI</h2>
+          <p class="text-muted mb-0">
+            Administre los accesos y roles del personal de la boutique.
+          </p>
+        </div>
+
+        <button (click)="nuevoUsuario()" class="btn btn-primary px-4 py-2 rounded-3">
+          <i class="fas fa-user-plus me-2"></i>
+          Nuevo Usuario
+        </button>
+      </div>
+    </div>
+
+    <div class="card-body px-4 pt-3 pb-2">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-10">
+          <label for="txtBuscar" class="form-label fw-semibold">Buscar Usuario</label>
+          <input
+            type="text"
+            id="txtBuscar"
+            class="form-control rounded-3"
+            placeholder="Buscar por nombre, correo o rol..."
+          />
+        </div>
+
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-outline-primary rounded-3">
+            <i class="fas fa-search me-2"></i>
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body px-4 pb-4">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>ID</th>
+              <th>Nombre Completo</th>
+              <th>Usuario</th>
+              <th>Correo Electrónico</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th class="text-center">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let user of usuarios">
+                <td class="fw-bold">#{{ user.ID_USUARIO }}</td>
+                <td>{{ user.NombreCompleto }}</td>
+                <td><span class="text-muted">@</span>{{ user.NombreUsuario }}</td>
+                <td>{{ user.CorreoElectronico }}</td>
+                <td>
+                  <span class="badge bg-info text-dark">{{ user.Rol }}</span>
+                </td>
+                <td>
+                  <span [ngClass]="user.Activo === 1 ? 'badge bg-success' : 'badge bg-secondary'">
+                    {{ user.Activo === 1 ? 'Activo' : 'Inactivo' }}
+                  </span>
+                </td>
+                <td class="text-center">
+                  <button (click)="editarUsuario(user.ID_USUARIO)" class="btn btn-sm btn-outline-warning me-2">
+                   <i class="fas fa-edit"></i>
+                  </button>
+                  <button (click)="eliminarUsuario(user.ID_USUARIO)" class="btn btn-sm btn-outline-danger">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+
+            <tr *ngIf="usuarios.length === 0">
+              <td colspan="7" class="text-center text-muted py-4">
+                No se encontraron usuarios registrados en ZOMAI.
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>

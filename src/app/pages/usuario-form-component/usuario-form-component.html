@@ -1,0 +1,64 @@
+<div class="container py-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-header bg-white border-0 pt-4 px-4">
+      <h3 class="fw-bold">{{ esEdicion ? 'Editar Usuario' : 'Nuevo Usuario' }} - ZOMAI</h3>
+      <p class="text-muted">Configure las credenciales y permisos de acceso al sistema.</p>
+    </div>
+
+    <div class="card-body px-4">
+      <form [formGroup]="usuarioForm" (ngSubmit)="guardarUsuario()">
+        <div class="row g-3">
+          
+          <div class="col-md-8">
+            <label class="form-label fw-bold">Nombre Completo</label>
+            <input type="text" formControlName="NombreCompleto" class="form-control" placeholder="Ej: Carlos Pérez">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Nombre de Usuario</label>
+            <div class="input-group">
+              <span class="input-group-text">@</span>
+              <input type="text" formControlName="NombreUsuario" class="form-control" placeholder="cperez">
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Correo Electrónico</label>
+            <input type="email" formControlName="CorreoElectronico" class="form-control" placeholder="usuario@zomai.com">
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Contraseña</label>
+            <input type="password" formControlName="ContrasenaHash" class="form-control" 
+                   [placeholder]="esEdicion ? 'Dejar en blanco para mantener actual' : 'Ingrese contraseña'">
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Rol / Permisos</label>
+            <select formControlName="Rol" class="form-select">
+              <option value="Admin">Administrador</option>
+              <option value="Vendedor">Vendedor / Staff</option>
+              <option value="Inventario">Gestor de Inventario</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Estado de Cuenta</label>
+            <select formControlName="Activo" class="form-select">
+              <option [ngValue]="1">Activo</option>
+              <option [ngValue]="0">Inactivo / Suspendido</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="d-flex justify-content-end gap-2 mt-5 mb-3">
+          <button type="button" (click)="cancelar()" class="btn btn-light px-4">Cancelar</button>
+          <button type="submit" [disabled]="usuarioForm.invalid" class="btn btn-primary px-5">
+            {{ esEdicion ? 'Actualizar Usuario' : 'Crear Usuario' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

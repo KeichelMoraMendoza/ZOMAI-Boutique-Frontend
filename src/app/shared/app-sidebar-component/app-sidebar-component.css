@@ -1,0 +1,78 @@
+
+
+.left-sidebar {
+    background: #ffffff !important;
+    border-right: 1px solid #E2E2E2 !important;
+    box-shadow: none !important;
+    transition: 0.3s ease;
+}
+
+.sidebar-nav ul li a {
+    color: #444 !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 12px 20px !important;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent !important;
+}
+
+.sidebar-nav ul li a:hover, 
+.sidebar-nav ul li.active > a {
+    background: #F9F8F6 !important; 
+    color: #9D844D !important;     
+    border-left: 3px solid #9D844D;
+}
+
+.sidebar-nav ul li a i {
+    color: #1C1C1C !important;
+    margin-right: 12px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover i {
+    color: #9D844D !important;
+}
+
+.nav-small-cap {
+    display: block !important; 
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9D844D !important; 
+    padding: 25px 20px 10px !important;
+    letter-spacing: 1.5px;
+    background: transparent !important;
+}
+
+.sidebar-nav ul li ul {
+    background: #ffffff !important;
+    padding-left: 10px;
+}
+
+.sidebar-nav ul li ul li a {
+    font-size: 0.85rem;
+    padding: 8px 20px !important;
+    color: #666 !important;
+    border-left: none !important; 
+}
+
+.sidebar-nav ul li ul li a:hover {
+    background: transparent !important;
+    color: #9D844D !important;
+}
+
+.user-profile {
+    display: none !important;
+}
+
+.nav-devider {
+    height: 1px;
+    background: #f0f0f0;
+    display: block;
+    margin: 10px 20px;
+}

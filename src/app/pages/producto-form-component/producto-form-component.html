@@ -1,0 +1,75 @@
+<div class="container py-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-header bg-white border-0 pt-4 px-4">
+      <h3 class="fw-bold">Nueva Prenda - Catálogo ZOMAI</h3>
+      <p class="text-muted">Complete los detalles para registrar el producto en inventario.</p>
+    </div>
+
+    <div class="card-body px-4">
+      <form [formGroup]="productoForm" (ngSubmit)="guardarProducto()">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Nombre de la Prenda</label>
+            <input type="text" formControlName="NOMBRE" class="form-control" placeholder="Ej: Vestido Lino Santorini">
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label fw-bold">Color</label>
+            <input type="text" formControlName="COLOR" class="form-control" placeholder="Ej: Blanco">
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label fw-bold">Talla</label>
+            <select formControlName="TALLA" class="form-select">
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label fw-bold">Descripción</label>
+            <textarea formControlName="DESCRIPCION" class="form-control" rows="2"></textarea>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Precio (Venta)</label>
+            <div class="input-group">
+              <span class="input-group-text">₡</span>
+              <input type="number" formControlName="PRECIO" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Stock Inicial</label>
+            <input type="number" formControlName="STOCKACTUAL" class="form-control">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label fw-bold">Stock Mínimo</label>
+            <input type="number" formControlName="STOCKMINIMO" class="form-control">
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Categoría (ID)</label>
+            <input type="number" formControlName="ID_CATEGORIA" class="form-control">
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-bold">Proveedor (ID)</label>
+            <input type="number" formControlName="ID_PROVEEDOR" class="form-control">
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end gap-2 mt-5 mb-3">
+          <button type="button" (click)="cancelar()" class="btn btn-light px-4">Cancelar</button>
+          <button type="submit" [disabled]="productoForm.invalid" class="btn btn-primary px-5">
+            Guardar en ZOMAI
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
