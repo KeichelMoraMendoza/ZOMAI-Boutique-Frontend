@@ -1,59 +1,29 @@
-# ProyectoAngularPrueba
+# ZOMAI Boutique - Frontend 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+Este repositorio contiene la capa del cliente y la interfaz de usuario para el sistema integral de gestión y administración interna **ZOMAI Boutique**. 
 
-## Development server
+El enfoque principal de este desarrollo fue construir una plataforma fluida, modular y altamente interactiva bajo una estética visual minimalista y limpia, optimizando la experiencia de usuario en la administración comercial.
 
-To start a local development server, run:
+## Tecnologías Utilizadas
 
-```bash
-ng serve
-```
+* **Framework Principal:** Angular (Arquitectura basada en componentes modulares).
+* **Lenguaje:** TypeScript (Tipado estricto para un código más seguro y mantenible).
+* **Estilos y Maquetación:** HTML5, CSS3 y Diseño Web Responsivo (Adaptable a pantallas de escritorio y dispositivos móviles).
+* **Gestión de Datos en Cliente:** Formularios Reactivos con validaciones avanzadas en tiempo real y consumo de servicios API.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Características Clave del Proyecto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* **Componentes Reutilizables:** Estructuración de layouts dinámicos para simplificar el mantenimiento del código.
+* **Módulos Independientes:** Separación clara de las características del sistema (Autenticación, Panel de Administración, Inventario, Ventas).
+* **Panel Analítico (Dashboard):** Interfaz limpia y sofisticada para la visualización rápida de métricas clave del negocio.
+* **Flujo Asíncrono Eficiente:** Implementación de peticiones HTTP para interactuar de forma transparente con el backend.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Estructura del Código
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* `src/app/components`: Elementos visuales modulares e interactivos de la interfaz.
+* `src/app/services`: Lógica encargada de la comunicación directa con los endpoints del backend.
+* `src/app/models`: Modelos de datos estructurados en TypeScript para asegurar la integridad de la información.
