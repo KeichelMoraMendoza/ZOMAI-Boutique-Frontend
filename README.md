@@ -8,7 +8,7 @@ El enfoque principal de este desarrollo fue construir una plataforma fluida, mod
 
 * **Framework Principal:** Angular (Arquitectura basada en componentes modulares).
 * **Lenguaje:** TypeScript (Tipado estricto para un código más seguro y mantenible).
-* **Estilos y Maquetación:** HTML5, CSS3 y Diseño Web Responsivo (Adaptable a pantallas de escritorio y dispositivos móviles).
+* **Estilos y Maquetación:** HTML, CSS y Diseño Web Responsivo (Adaptable a pantallas de escritorio y dispositivos móviles).
 * **Gestión de Datos en Cliente:** Formularios Reactivos con validaciones avanzadas en tiempo real y consumo de servicios API.
 
 ---
